@@ -40,7 +40,7 @@ html, body{
 }
 .calendar{
     height: 610px;
-    width: max-contnet;
+    width: max-content;
     background-color: white;
     border-radius: 25px;
     overflow: hidden;
@@ -58,7 +58,7 @@ html, body{
     padding: 10px;
 }
 .calendar-body{
-    pad: 10px;
+    padding: 10px;
 }
 .calendar-week-days{
     display: grid;
@@ -188,13 +188,15 @@ html, body{
 }
 .month-list.hide{
     animation: to-right 1s forwards;
-    visibility: none;
+    visibility: hidden;
     pointer-events: none;
 }
 .date-time-format{
     width: max-content;
     height: max-content;
     font-family: Dubai Light, Century Gothic;
+    position: relative;
+    display:inline;
     top: 140px;
     justify-content: center;
 }
@@ -215,4 +217,90 @@ html, body{
     left: 40%;
     top: -18px;
     text-align: center;
+}
+
+.time-format{
+    font-size: 1.5rem;
+}
+
+.time-format.hideTime{
+    animation: hidetime 1.5s forwards;
+}
+
+.day-text-format.hidetime{
+    animation: hidetime 1.5s forwards;
+}
+
+.date-format.hideTime{
+    animation: hidetime 1.5s forwards;
+}
+
+.day-text-format.showtime{
+    animation: showtime 1s forwards;
+}
+.time-format.showtime{
+    animation: showtime 1s forwards;
+}
+.date-format.showtime{
+    animation: showtime 1s forwards;
+}
+
+@keyframes to-top{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(100%);
+        opacity: 1;
+    }
+}
+
+@keyframes to-left{
+    0%{
+        transform: translateY(230%);
+        opacity:1;
+    }
+    100%{
+        transform: translateY(230%);
+        opacity: 1;
+    }
+}
+
+@keyframes to-right{
+    10%{
+        transform: translateY(0%);
+        opacity:1;
+    }
+    100%{
+        transform: translateY(-150%);
+        opacity: 1;
+    }
+}
+
+@keyframes showtime{
+    0%{
+        transform: translateY(250%);
+        opacity:1;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes hidetime{
+    0%{
+        transform: translateY(0%);
+        opacity:1;
+    }
+    100%{
+        transform: translateY(-370%);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 375px){
+    .month-list>div{
+        margin: 5px 0px;
+    }
 }
