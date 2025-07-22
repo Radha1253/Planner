@@ -28,17 +28,17 @@ let month_picker = document.querySelector('#month-picker');
 let dayTextFormat = document.querySelector('.day-text-format');
 let timeFormat = document.querySelector('.time-format');
 const dateFormat = document.querySelector('.date-format');
-
+let month_list = calendar.querySelector('.month-list');
 month_picker.onclick = () => {
     month_list.classList.remove('hideonce');
     month_list.classList.remove('hide');
     month_list.classList.add('show');
     dayTextFormat.classList.remove('showtime');
-    dayTextFormat.classList.add('hidetime');
+    dayTextFormat.classList.add('hideTime');
     timeFormat.classList.remove('showtime');
-    timeFormat.classList.add('hidetime');
+    timeFormat.classList.add('hideTime');
     dateFormat.classList.remove('showtime');
-    dateFormat.classList.add("hidetime");
+    dateFormat.classList.add("hideTime");
 
 }
 const generateCalendar = (month, year) => {
@@ -75,7 +75,7 @@ const generateCalendar = (month, year) => {
     }
 };
 
-let month_list = calendar.querySelector('.month-list');
+
 month_names.forEach((e, index) => {
     let month = document.createElement('div');
     month.innerHTML = `<div>${e}</div>`;
@@ -91,6 +91,7 @@ month_names.forEach((e, index) => {
         dateFormat.classList.remove('showtime');
 
     };
+    month_list.appendChild(month);
 });
 
 (function() {
