@@ -51,3 +51,28 @@ body{
     margin-right: 16px;
     font-size: 18px;
 }
+.weather-icon{
+    width: 150px;
+    margin-top: 30px;
+}
+.weather h1{
+    font-size: 70px;
+    font-weight: 500;
+}
+.weather h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.col img{
+    width: 90px;
+    height: 90px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
